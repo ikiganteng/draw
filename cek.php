@@ -1,6 +1,16 @@
-
 <?php
-//stee4n
+date_default_timezone_set("Asia/Jakarta");
+function read ($length='255') 
+{ 
+   if (!isset ($GLOBALS['StdinPointer'])) 
+   { 
+      $GLOBALS['StdinPointer'] = fopen ("php://stdin","r"); 
+   } 
+   $line = fgets ($GLOBALS['StdinPointer'],$length); 
+   return trim ($line); 
+} 
+function add(){
+
 $acak = rand(111111111,999999999);
 $get = '811'.$acak;
 $ch = curl_init();
@@ -28,6 +38,11 @@ if (curl_errno($ch)) {
 }
 curl_close ($ch);
 
-echo $result;
-
-?>
+return $result;
+}
+echo "[>] ENTER: ";
+for ($x = 0; $x <= 10000; $x++){
+	$ib = add();
+    echo $ib. "\n";
+	sleep(5);
+}
