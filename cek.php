@@ -15,7 +15,7 @@ $acak = rand(111111111,999999999);
 $get = '811'.$acak;
 $ch = curl_init();
 
-curl_setopt($ch, CURLOPT_URL, "http://faduli.net/kfc.php?jancok=".$get);
+curl_setopt($ch, CURLOPT_URL, "http://jis.ooo/kfc/8digit.php?v=".$get);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
 
