@@ -38,7 +38,7 @@ if (curl_errno($ch)) {
 }
 curl_close ($ch);
 
-$jDecode = json_decode($result); if ($jDecode->status == "valid"){ return $code." => VALID"; }else{ return $code." => INVALID"; }
+$jDecode = json_decode($result); if ($jDecode->status == "valid"){ return $get." => VALID"; }else{ return $get." => INVALID"; }
 }
 echo "[>] ENTER: ";
 for ($x = 0; $x <= 10000; $x++){
